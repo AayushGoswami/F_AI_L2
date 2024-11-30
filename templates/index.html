@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc AIssistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('blood_report_analyzer') }}">Blood Report Analyzer</a></li>
+            <li><a href="{{ url_for('x_ray_analyzer') }}">X-ray Analyzer</a></li>
+            <li><a href="{{ url_for('ecg_analyzer') }}">ECG Analyzer</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Doc AssIstant</h1>
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>
+                Welcome to our AI-powered assistant, a collaborative creation by <b>Aayush Goswami</b> and <b>Om Modi</b>. 
+                This platform is designed specifically for doctors, offering a streamlined way to summarize critical 
+                information from medical reports. By simply uploading a PDF or an image of a medical report, our intelligent 
+                system quickly processes the data and provides concise, accurate summaries to assist healthcare professionals 
+                in making informed decisions.
+            </p>
+            <p>
+                This current version is a <b>Prototype</b>, showcasing the potential of AI in simplifying medical documentation 
+                and analysis. While it focuses on summarizing medical reports, it has been designed with scalability in mind. 
+                Our platform is a stepping stone toward a more comprehensive solution that can handle complex medical 
+                documentation effortlessly.
+            </p>
+            <p>
+                Future iterations aim to expand the platform’s capabilities, including advanced analysis of X-ray reports, 
+                ECG readings, and other diagnostic tools. This evolving project reflects our commitment to enhancing medical 
+                workflows and empowering healthcare professionals with cutting-edge technology.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
