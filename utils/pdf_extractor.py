@@ -17,9 +17,6 @@ def extract_text_from_pdf(file_path):
         if isinstance(file_path, str):
             with open(file_path, 'rb') as file:
                 pdf_reader = PyPDF2.PdfReader(file)
-        # else:
-        #     # If a file-like object is provided
-        #     pdf_reader = PyPDF2.PdfReader(file_path)
         
         # Extract text from all pages
                 text = ""
