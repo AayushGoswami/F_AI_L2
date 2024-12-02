@@ -213,11 +213,6 @@ h1 {
     line-height: 1.6;
 }
 
-/* .file-input:focus {
-    outline: none;
-    border-color: #3498db;
-} */
-
 .upload-btn {
     padding: 15px 15px;
     background-color: #63431e;
@@ -238,16 +233,6 @@ h1 {
     color: peachpuff;
     transition: 0.2s;
 }
-
-/* @media (max-width: 768px) {
-    .sidebar ul li a {
-        font-size: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-} */
 
 .summary-output {
     padding: 15px;
