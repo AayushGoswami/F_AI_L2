@@ -53,7 +53,6 @@ class AIProcessor:
                 max_tokens=1024,
                 temperature=0.7,
             )
-            # print(chat_completions.choices[0].message.content.strip())
             # Extract and return the summary text
             return chat_completions.choices[0].message.content.strip()
         
@@ -96,7 +95,6 @@ class AIProcessor:
                 ],
                 max_tokens=300
             )
-            print(response.choices[0].message.content.strip())
             # Extract and return the parameter analysis
             return response.choices[0].message.content.strip()
         
@@ -106,15 +104,15 @@ class AIProcessor:
 
     @staticmethod
     def validate_medical_document(text: str) -> bool:
-
-        # Basic validation of whether the text appears to be a medical document.
+        """
+        Basic validation of whether the text appears to be a medical document.
         
-        # Args:
-        #     text (str): Text to validate
+        Args:
+            text (str): Text to validate
         
-        # Returns:
-        #     bool: Whether the text seems to be a medical document
-        
+        Returns:
+            bool: Whether the text seems to be a medical document
+        """
         medical_keywords = [
             'patient', 'report', 'blood', 'test', 'result', 
             'medical', 'diagnosis', 'laboratory', 'clinic'
