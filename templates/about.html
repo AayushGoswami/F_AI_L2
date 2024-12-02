@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc AIssistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'components/sidebar.html' %}
+    <div class="main-content">
+        <h1>Welcome to Doc AssIstant...</h1>
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>
+                Welcome to our AI-powered assistant, a collaborative creation by <a href="https://github.com/AayushGoswami" class="names" target="_blank"><b>Aayush Goswami</b></a> and <a href="https://github.com/Ommodi07" class="names" target="_blank"><b>Om Modi</b></a>. 
+                This platform is designed specifically for doctors, offering a streamlined way to summarize critical 
+                information from medical reports. By simply uploading a PDF or an image of a medical report, our intelligent 
+                system quickly processes the data and provides concise, accurate summaries to assist healthcare professionals 
+                in making informed decisions.
+            </p>
+            <p>
+                This current version is a <b><a href="www.example.com" class="names">Prototype</a></b>, showcasing the potential of AI in simplifying medical documentation 
+                and analysis. While it focuses on summarizing medical reports, it has been designed with scalability in mind. 
+                Our platform is a stepping stone toward a more comprehensive solution that can handle complex medical 
+                documentation effortlessly.
+            </p>
+            <p>
+                Future iterations aim to expand the platform’s capabilities, including advanced analysis of X-ray reports, 
+                ECG readings, and other diagnostic tools. This evolving project reflects our commitment to enhancing medical 
+                workflows and empowering healthcare professionals with cutting-edge technology.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
