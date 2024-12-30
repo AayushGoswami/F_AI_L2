@@ -10,11 +10,19 @@
     {% include 'components/sidebar.html' %}
     <div class="main-content">
         <h1>X-ray Analyzer</h1>
-        <div class="sub-content">
-        <p>
-            Welcome to the <b>X-ray Analyzer!</b> This feature is under development.
-        </p>
-        </div>
+        <form action="{{ url_for('x_ray_analyzer') }}" method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="file-upload" class="file-label"><h2>Upload X Ray:</h2></label>
+            <p>By uploading the X-Ray of patient's chest i can help you to know if patient is having pnumonia or not !!</p>
+            <input type="file" id="file-upload" name="file" accept=".jpg, .jpeg, .png" class="file-input" multiple>
+            <button type="submit" class="upload-btn">Analyze</button>
+        </form>
+        {% if summary %}
+            <div class="sub-content">
+                <h2>Analysis Summary:</h2>
+                <p id="markdown-content">{{ summary }}</p>
+            </div>
+        {% endif %}
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

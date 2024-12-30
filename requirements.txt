@@ -6,3 +6,4 @@ pytesseract
 PyPDF2
 python-dotenv
 groq
+tensorflow

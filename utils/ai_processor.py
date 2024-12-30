@@ -60,6 +60,35 @@ class AIProcessor:
             logging.error(f"Error in AI summarization: {e}")
             return f"Error in AI analysis: {str(e)}"
     
+    def summarize_x_ray(self, text: str,) -> str:
+
+        try:
+            # Construct prompt
+            prompt = f"""Analyze and summarize the following X-ray report in 3-4 lines.{text}"""
+            
+            # Generate summary
+            chat_completions = self.client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": prompt
+                    },
+                    {
+                        "role": "user",
+                        "content": "Summary: "
+                        }
+                ],
+                model="llama-3.2-11b-vision-preview",
+                max_tokens=1024,
+                temperature=0.7,
+            )
+            # Extract and return the summary text
+            return chat_completions.choices[0].message.content.strip()
+        
+        except Exception as e:
+            logging.error(f"Error in AI summarization: {e}")
+            return f"Error in AI analysis: {str(e)}"
+
     def analyze_medical_parameters(
         self, 
         text: str, 

@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import logging
 
-pytesseract.pytesseract.tesseract_cmd = r"your_TESSERACT-OCR_folder_path\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def preprocess_image(image_path):
     """

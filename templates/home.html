@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Assistant - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'components/sidebar.html' %}
+    <div class="main-content">
+        <h1>Welcome to Doc Assistant</h1>
+        <div class="sub-content">
+            <h2>About Our Service</h2>
+            <p>
+                Doc Assistant is an AI-powered platform designed to assist healthcare professionals by providing quick and accurate analysis of medical reports. Our services include:
+            </p>
+            <ul>
+                <li>Blood Report Analyzer</li>
+                <li>X-ray Analyzer</li>
+                <li>ECG Analyzer</li>
+            </ul>
+            <p>
+                By leveraging advanced machine learning algorithms, we aim to streamline the diagnostic process and help doctors make informed decisions faster.
+            </p>
+        </div>
+        <div class="sub-content">
+            <h2>Get Started</h2>
+            <p>
+                Choose a service from the sidebar to begin analyzing medical reports. Our tools are designed to be user-friendly and efficient, ensuring you get the information you need with minimal effort.
+            </p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -13,6 +13,7 @@
         <h1>Blood Report Analyzer</h1>
         <form action="{{ url_for('blood_report_analyzer') }}" method="post" enctype="multipart/form-data" class="upload-form">
             <label for="file-upload" class="file-label"><h2>Upload Blood Report:</h2></label>
+            <p>You have to simply upload your blood report and you will get the summary about the patient's condition.</p>
             <input type="file" id="file-upload" name="file" accept=".pdf, .jpg, .jpeg, .png" class="file-input" multiple>
             <button type="submit" class="upload-btn">Analyze</button>
         </form>

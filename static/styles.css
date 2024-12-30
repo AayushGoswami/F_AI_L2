@@ -1,8 +1,9 @@
 /* General styling */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: peachpuff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     overflow: auto;
 }
 
@@ -12,244 +13,129 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    width: 10%; /* Collapsed width */
-    background-color: #63431e74;
+    width: 15%;
+    background-color: #2c3e50;
     transition: 0.2s ease-in-out;
-    overflow: hidden; /* Prevent overflow of sidebar items */
+    overflow: hidden;
     z-index: 100;
-}
-
-
-/* Sidebar expanded on hover */
-.sidebar:hover {
-    width: 20%; /* Expanded width */
-     background-color: #63431e;
-    transition: 0.2s ease-in-out;
+    color: #ecf0f1;
 }
 
 .sidebar h1 {
-    opacity: 1;
     text-align: center;
-    font-size: 1.7rem;
-    transition: 0.1s;
+    font-size: 1.8rem;
+    padding: 20px 0;
+    margin: 0;
+    background-color: #2980b9;
+    color: #ecf0f1;
 }
 
-.sidebar:hover h1 {
-    margin: 40px 10px;
-    padding: 10px;
-    font-size: 2rem;
-    text-shadow: 5px 5px 10px #000000;
-    opacity: 1;
-    color: peachpuff;
-    transition: 0.2s ease-in-out;
-}
-
-.sidebar h1:hover {
-    font-size: 2.5rem;
-}
-
-/* Sidebar links container */
 .sidebar ul {
     list-style-type: none;
-    padding: 0px;
-    margin: 50px 0 0;
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content:first baseline;
-    align-items: center;
-    opacity: 1; /* Hide the list items when sidebar is collapsed */
-    transition: 0.1s ease-in-out;
-}
-
-/* Sidebar links become visible when expanded */
-.sidebar:hover ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 50px 0 0;
-    height: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content:first baseline;
-    align-items: center;
-    opacity: 1; /* Make the list items visible on hover */
-    transition: 0.3s ease-in-out;
-}
-
-/* Sidebar list items */
-.sidebar ul li {
+    padding: 0;
     margin: 0;
-    padding: 10px;
-    width: 100%; /* Ensure the list items stay within the sidebar */
-    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Sidebar links styling */
+.sidebar ul li {
+    width: 100%;
+}
+
 .sidebar ul li a {
-    text-decoration: none;
-    color: peachpuff;
-    font-size: 1rem;
-    font-weight: bold;
     display: block;
-    padding: 10px;
-    margin: 0 15px 0;
-    transition: 0.1s ease;
-}
-
-.sidebar ul li a:focus {
-    outline: 2px solid #63431e;
-    outline-offset: 2px;
-    background-color: #542d05;
-    color: peachpuff;
-}
-
-.sidebar:hover ul li a {
-    font-size: 1.5rem;
-    text-shadow: 5px 5px 5px #000000;
+    padding: 15px;
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
 .sidebar ul li a:hover {
-    font-size: 1.6rem;
-    font-weight: bold;
-    text-shadow: 5px 5px 5px #c98843;
-    background-color: peachpuff;
-    color: #63431e;
-    border-radius: 15px;
-    transition: 0.2s ease-in-out;
+    background-color: #2980b9;
 }
 
 /* Main content styling */
 .main-content {
-    margin-left: 10%; /* Space for collapsed sidebar */
+    margin-left: 15%;
+    padding: 20px;
     transition: margin-left 0.3s ease-in-out;
 }
 
-.sidebar:hover ~ .main-content {
-    margin-left: 20%; /* Space for expanded sidebar */
-}
-
-/* Title heading styling */
 h1 {
-    font-size: 3rem;
-    color: #910000;
-    text-shadow: 5px 5px 15px rgba(91, 38, 38, 0.585);
+    font-size: 2.5rem;
+    color: #2980b9;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-/* About Us section styling */
-.about-section {
+.about-section, .sub-content, .upload-form {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: peachpuff;
-    border-radius: 10px;
-    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.511);
-    color: #63431e;
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
-/* Subheading inside About Us */
-.about-section h2 {
-    font-size: 1.5em;
-    color: #542d05;
-    font-weight: bold;
+.about-section h2, .sub-content h2, .upload-form h2 {
+    font-size: 1.8rem;
+    color: #2980b9;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.names {
-    font-size: 1.2rem;
-    color: #542d05;
-}
-
-.sub-content {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: peachpuff;
-    border-radius: 10px;
-    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.511);
-    color: #63431e;
-    font-size: 1rem;
-    line-height: 1.6;
-
-}
-
-/* File Upload Form Styles */
 .upload-form {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background-color: peachpuff;
-    border-radius: 10px;
-    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.511);
-    color: #63431e;
-    font-size: 1rem;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.file-label h2 {
-    font-size: 1.5em;
-    color: #6d4122;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 .file-input {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
-    margin-bottom: 20px;
-    background-color: #63431e;
+    background-color: #2980b9;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.511);
-    color: peachpuff;
-    align-content: center;
-    font-size: 1rem;
-    line-height: 1.6;
 }
 
 .upload-btn {
-    padding: 15px 15px;
-    background-color: #63431e;
-    color: peachpuff;
+    padding: 15px;
+    background-color: #2980b9;
+    color: #ecf0f1;
     border: none;
-    border-radius: 15px;
-    font-weight: bold;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 1.2rem;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .upload-btn:hover {
-    padding: 15px 15px;
-    font-size: 2rem;
-    font-weight: bolder;
-    background-color: #542d05;
-    color: peachpuff;
-    transition: 0.2s;
+    background-color: #1f6391;
 }
 
 .summary-output {
     padding: 15px;
-    
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar {
-    background-color: peachpuff;
+    background-color: #ecf0f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #63431e79;
+    background-color: #2980b9;
     border-radius: 20px;
-    transition: 1s ease-in-out;
+    transition: background-color 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #63431e;
-    transition: 1s ease-in-out;
+    background-color: #1f6391;
 }
